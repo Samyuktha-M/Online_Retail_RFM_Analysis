@@ -1,2 +1,167 @@
-# Online_Retail_RFM_Analysis
-End-to-end RFM customer segmentation analysis with Python, MySQL, Tableau and Claude AI
+# Online Retail RFM Customer Segmentation Analysis
+
+An end-to-end data analytics portfolio project analysing 541,909 transactions from a UK online gift retailer (Dec 2010 — Dec 2011) using RFM segmentation and Claude AI integration.
+
+---
+
+## 🔗 Live Dashboard
+[View Tableau Dashboard](https://public.tableau.com/app/profile/samyuktha.muralidharan7364/viz/OnlineRetailRFMAnalysis_17793169720000/SalesOverview)
+
+---
+
+## 📊 Project Overview
+
+This project builds a complete customer analytics pipeline from raw data to AI-powered business insights:
+
+- **541,909 rows** cleaned to **390,857** valid transactions
+- **4,334 customers** scored and segmented using RFM methodology
+- **7 customer segments** identified — Champions to Lost
+- **Claude AI** integrated for insights, emails, SQL interface
+- **3 Tableau dashboards** published to Tableau Public
+
+---
+
+## 🛠️ Tech Stack
+
+| Tool |   Purpose   |
+|------|-------------|
+| MySQL | Data storage and SQL analysis |
+| Python + pandas | Data cleaning and processing |
+| SQLAlchemy | Python-MySQL connection |
+| Plotly | Interactive visualisations |
+| Anthropic Claude API | AI-powered business insights |
+| Tableau Public | BI dashboards |
+| Jupyter Notebook | Analysis environment |
+| VS Code | Development environment |
+
+---
+
+## 📁 Repository Structure
+
+online-retail-rfm-analysis/
+├── notebooks/
+│   └── RFM_AI_Analysis.ipynb
+├── sql/
+│   ├── 01_data_cleaning.sql
+│   ├── 02_rfm_metrics.sql
+│   ├── 03_rfm_scoring.sql
+│   ├── 04_rfm_segments.sql
+│   └── 05_segment_analysis.sql
+├── data/
+│   └── rfm_segments.csv
+└── README.md
+
+---
+
+## 🤖 Claude AI Features
+
+The Jupyter notebook integrates Claude API for 7 use cases:
+
+| Feature | Description |
+|---------|-------------|
+| **KPI Summary** | Pulls live metrics from MySQL |
+| **Insight Narrator** | Auto-generates business narrative from segment data |
+| **SWOT Analysis** | Dynamic SWOT using live database context |
+| **Business Improvement Plan** | Strategic recommendations with ROI projections |
+| **Email Generator** | Personalised emails per segment — tiered by recency and spend |
+| **Text-to-SQL** | Plain English questions converted to SQL queries |
+| **Customer Intelligence Centre** | Individual customer profile + AI narrative + personalised email |
+| **Executive Summary** | Board-level report generated from all analysis |
+
+---
+
+## 📈 Key Findings
+
+- **£8.72M** total revenue across 13 months
+- **Champions** (28.1% of customers) drive **67.3%** of revenue
+- **531 At Risk** customers represent **£746K** recoverable revenue
+- **No Saturday transactions** — confirms B2B wholesale model
+- **Thursday peak** at £1.94M — optimal day for campaigns
+- **Customer 16446** — £168K in 2 orders — wholesale anomaly identified
+
+---
+
+## 🗂️ RFM Segments
+
+| Segment | Customers | Revenue | Avg Recency | Avg Frequency |
+|---------|-----------|---------|-------------|---------------|
+| Champions | 1,219 | £5,869,362 | 13.7 days | 9.4 orders |
+| Loyal Customers | 571 | £992,204 | 50.7 days | 4.2 orders |
+| At Risk | 531 | £746,433 | 126.2 days | 3.7 orders |
+| Lost | 784 | £377,897 | 273.2 days | 1.2 orders |
+| Potential Loyalists | 279 | £344,295 | 16.4 days | 2.0 orders |
+| Need Attention | 715 | £316,093 | 95.2 days | 1.1 orders |
+| New Customers | 235 | £75,173 | 19.2 days | 1.0 orders |
+
+---
+
+## 🔍 Data Cleaning Summary
+
+| Step | Action | Rows Removed |
+|------|--------|-------------|
+| Remove cancellations | Drop C-prefix invoices | 9,288 |
+| Remove non-products | Filter invalid SKUs | ~8,000 |
+| Remove nulls | Drop missing CustomerID | 135,080 |
+| Remove negatives | Drop quantity/price ≤ 0 | ~500 |
+| Remove duplicates | Drop exact duplicates | 5,268 |
+| **Final dataset** | **390,857 clean rows** | |
+
+---
+
+## 📊 Tableau Dashboards
+
+| Dashboard | Charts |
+|-----------|--------|
+| **Sales Overview** | Monthly revenue, top 10 products, revenue by day of week |
+| **Customer Segmentation** | Revenue treemap, customer count, avg monetary, recency & frequency |
+| **RFM Deep Dive** | Recency vs monetary scatter, RFM score heatmap |
+
+---
+
+## ⚙️ Setup
+
+### Prerequisites
+```bash
+pip install pandas sqlalchemy pymysql anthropic plotly jupyter
+```
+
+### Database Setup
+- MySQL 8.0+
+- Create database `online_retail`
+- Load UCI Online Retail dataset
+- Run SQL files in `/sql` folder in order
+
+### API Key
+1. Get key from https://console.anthropic.com
+2. Replace `YOUR_ANTHROPIC_API_KEY` in Cell 1 of notebook
+
+### Run Notebook
+```bash
+jupyter notebook notebooks/RFM_AI_Analysis.ipynb
+```
+
+---
+
+## 📂 Data Source
+
+**UCI Machine Learning Repository — Online Retail Dataset**
+- 541,909 transactions
+- December 2010 — December 2011  
+- UK-based non-store online retailer
+- 38 countries
+- [Dataset Link](https://archive.ics.uci.edu/ml/datasets/online+retail)
+
+---
+
+## 💡 Notable Anomaly
+
+**Customer 16446** — classified as Potential Loyalist but spent £168,472 in just 2 orders. Analysis identified this as a likely wholesale buyer misclassified by standard RFM scoring. In production this would warrant a separate wholesale customer tier.
+
+---
+
+## 👤 Author
+
+**Samyuktha Muralidharan**
+
+- 📊 Tableau Public: [View Dashboards](https://public.tableau.com/app/profile/samyuktha.muralidharan7364)
+- 💻 GitHub: [github.com/your-username](https://github.com)
