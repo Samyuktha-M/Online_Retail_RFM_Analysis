@@ -4,7 +4,7 @@ An end-to-end data analytics portfolio project analysing 541,909 transactions fr
 
 ---
 
-## 🔗 Live Dashboard
+## 🔗 Tableau Dashboard
 [View Tableau Dashboard](https://public.tableau.com/app/profile/samyuktha.muralidharan7364/viz/OnlineRetailRFMAnalysis_17793169720000/SalesOverview)
 
 ---
