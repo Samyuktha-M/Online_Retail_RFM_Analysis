@@ -4,8 +4,13 @@ An end-to-end data analytics portfolio project analysing 541,909 transactions fr
 
 ---
 
-## 🔗 Tableau Dashboard
-[View Tableau Dashboard](https://public.tableau.com/app/profile/samyuktha.muralidharan7364/viz/OnlineRetailRFMAnalysis_17793169720000/SalesOverview)
+## 📊 Tableau Dashboards
+
+| Dashboard | Description | Link |
+|-----------|-------------|------|
+| Sales Overview | Monthly revenue, top products, day of week analysis | [View →](https://public.tableau.com/views/OnlineRetailRFMAnalysis_17793169720000/SalesOverview) |
+| Customer Segmentation | Segment analysis, revenue treemap, RFM metrics | [View →](https://public.tableau.com/views/OnlineRetailRFMAnalysis_17793169720000/CustomerSegmentation) |
+| RFM Deep Dive | Scatter plot, score heatmap, anomaly annotation | [View →](https://public.tableau.com/views/OnlineRetailRFMAnalysis_17793169720000/RFMDeepDive) |
 
 ---
 
