@@ -101,6 +101,7 @@ The Jupyter notebook integrates Claude API for 7 use cases:
 | Potential Loyalists | 279 | £344,295 | 16.4 days | 2.0 orders |
 | Need Attention | 715 | £316,093 | 95.2 days | 1.1 orders |
 | New Customers | 235 | £75,173 | 19.2 days | 1.0 orders |
+| **Total** | **4,334** | **£8,721,457** |
 
 ---
 
