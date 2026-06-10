@@ -44,10 +44,10 @@ This project builds a complete customer analytics pipeline from raw data to AI-p
 
 ## 📁 Repository Structure
 
-online-retail-rfm-analysis/
+Online-Retail-RFM-Analysis/
     ├── notebooks/
-    │   ├── 01_Data_Cleaning.ipynb
-    │   └── 02_RFM_AI_Analysis.ipynb
+    │   ├── RFM_Data_Cleaning.ipynb
+    │   └── RFM_AI_Analysis.ipynb
     ├── sql/
     │   ├── 01_data_cleaning.sql
     │   ├── 02_rfm_scoring.sql
@@ -55,7 +55,8 @@ online-retail-rfm-analysis/
     ├── scripts/
     │   └── export_csv.py
     ├── data/
-    │   └── rfm_segments.csv
+    │   ├── rfm_segments.csv
+    │   └── rfm_scores.csv 
     └── README.md
 
 ---
@@ -157,8 +158,20 @@ jupyter notebook notebooks/RFM_AI_Analysis.ipynb
 - UK-based non-store online retailer
 - 38 countries
 - [Dataset Link](https://archive.ics.uci.edu/ml/datasets/online+retail)
+- | Kaggle |
+- [Download](https://www.kaggle.com/datasets/vijayuv/onlineretail) |
 
 ---
+
+## 📂 Data Files Included
+
+| File | Description | Rows |
+|------|-------------|------|
+| `rfm_segments.csv` | Customer segments with RFM scores and labels | 4,334 |
+| `rfm_scores.csv` | Raw RFM scores before segmentation | 4,334 |
+
+> Note: `sales_clean.csv` not included due to file size.
+> Download raw dataset from UCI or Kaggle links above.
 
 ## 💡 Notable Anomaly
 
