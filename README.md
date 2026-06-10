@@ -84,7 +84,7 @@ The Jupyter notebook integrates Claude API for 7 use cases:
 - **531 At Risk** customers represent **£746K** recoverable revenue
 - **No Saturday transactions** — confirms B2B wholesale model
 - **Thursday peak** at £1.94M — optimal day for campaigns
-- **Lost segment** 784 Lost customers — 18.1% of total base — 
+- **784 Lost customers** — 18.1% of total base — 
   gone for an average of 9 months with £378K revenue lost
 - **Customer 16446** — £168K in 2 orders — wholesale anomaly identified
 
