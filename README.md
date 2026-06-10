@@ -107,17 +107,25 @@ The Jupyter notebook integrates Claude API for 7 use cases:
 
 ## 🔍 Data Cleaning Summary
 
-| Step | Action | Rows Removed |
-|------|--------|-------------|
-| Remove cancellations | Drop C-prefix invoices | 9,288 |
-| Remove non-products | Filter invalid SKUs | ~8,000 |
-| Remove nulls | Drop missing CustomerID | 135,080 |
-| Remove negatives | Drop quantity/price ≤ 0 | ~500 |
-| Remove duplicates | Drop exact duplicates | 5,268 |
-| **Final dataset** | **390,857 clean rows** | |
+**Data type conversions:**
+- `InvoiceNo` → string (was numeric)
+- `InvoiceDate` → datetime (was string)
+- `CustomerID` → integer (was float)
+- `Revenue` → calculated column added (Quantity × UnitPrice)
 
+| Step | Action |
+|------|--------|
+| Remove cancellations | Separate C-prefix invoices into cancellations dataframe |
+| Remove non-products | Filter StockCodes not matching `^\d{5}[A-Za-z]?$` |
+| Remove nulls | Drop rows with missing CustomerID |
+| Remove negatives | Drop rows where Quantity ≤ 0 or UnitPrice ≤ 0 |
+| Remove duplicates | Drop exact duplicate rows |
+| **Final dataset** | **390,857 clean rows** |
 ---
-
+**Additional steps:**
+- Cancellations saved as separate dataframe (not just deleted)
+- Revenue column added: Quantity × UnitPrice
+  
 ## 📊 Tableau Dashboards
 
 | Dashboard | Charts |
