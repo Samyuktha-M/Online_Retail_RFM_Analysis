@@ -104,6 +104,20 @@ The Jupyter notebook integrates Claude API for 7 use cases:
 | **Total** | **4,334** | **100%** | **£8,721,457** |
 
 ---
+## 📋 Original Dataset Schema
+
+Source: UCI Machine Learning Repository
+
+| Variable | Role | Type | Description | Units |
+|----------|------|------|-------------|-------|
+| InvoiceNo | ID | Categorical | 6-digit transaction number — prefix 'C' indicates cancellation | — |
+| StockCode | ID | Categorical | 5-digit product code | — |
+| Description | Feature | Categorical | Product name | — |
+| Quantity | Feature | Integer | Units per transaction | — |
+| InvoiceDate | Feature | Date | Transaction date and time | — |
+| UnitPrice | Feature | Continuous | Product price per unit | £ Sterling |
+| CustomerID | Feature | Categorical | 5-digit customer identifier | — |
+| Country | Feature | Categorical | Customer country of residence | — |
 
 ## 🔍 Data Cleaning Summary
 
