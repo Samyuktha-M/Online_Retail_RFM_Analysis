@@ -69,11 +69,11 @@ The Jupyter notebook integrates Claude API for 7 use cases:
 |---------|-------------|
 | **Insight Narrator** | Auto-generates business narrative from segment data |
 | **SWOT Analysis** | Dynamic SWOT using live database context |
-| **Business Improvement Plan** | Strategic recommendations with ROI projections |
-| **Email Generator** | Personalised emails per segment — tiered by recency and spend |
-| **Text-to-SQL** | Plain English questions converted to SQL queries |
-| **Customer Intelligence Centre** | Individual customer profile + AI narrative + personalised email |
-| **Executive Summary** | Board-level report generated from all analysis |
+| **Business Improvement Plan** | Phased 30/90/180 day action plan built from segment summary, business context and SWOT output —     with revenue recovery projections |
+| **Email Generator** | Tailored marketing emails per segment — At Risk tiered by recency, Lost restricted to top 200 high-value      customers, each with segment-specific tone and offer |
+| **Text-to-SQL** | Interactive natural language interface — type any question, Claude generates and executes SQL, returns results    with AI interpretation |
+| **Customer Intelligence Centre** | Interactive lookup — enter customer ID for full RFM profile, AI narrative and personalised       email tailored by segment and spend level |
+| **Executive Summary** | 6-section board report synthesising all previous analysis outputs — key findings, critical risks, priority recommendations and expected revenue impact|
 
 ---
 
