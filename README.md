@@ -154,15 +154,18 @@ jupyter notebook notebooks/RFM_AI_Analysis.ipynb
 
 **UCI Machine Learning Repository — Online Retail Dataset**
 - 541,909 transactions
-- December 2010 — December 2011  
+- December 2010 — December 2011
 - UK-based non-store online retailer
 - 38 countries
-- [Dataset Link](https://archive.ics.uci.edu/ml/datasets/online+retail)
-- | Kaggle |[Download](https://www.kaggle.com/datasets/vijayuv/onlineretail) |
+
+| Source | Link |
+|--------|------|
+| UCI Repository | [Download](https://archive.ics.uci.edu/ml/datasets/online+retail) |
+| Kaggle | [Download](https://www.kaggle.com/datasets/vijayuv/onlineretail) |
 
 ---
 
-## 📂 Data Files Included
+## 🗄️ Data Files Included
 
 | File | Description | Rows |
 |------|-------------|------|
