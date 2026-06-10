@@ -30,14 +30,14 @@ This project builds a complete customer analytics pipeline from raw data to AI-p
 
 ## 🛠️ Tech Stack
 
-| Tool |   Purpose   |
-|------|-------------|
-| MySQL | Data storage and SQL analysis |
-| Python + pandas | Data cleaning and processing |
-| SQLAlchemy | Python-MySQL connection |
+| Tool | Purpose |
+|------|---------|
+| MySQL + MySQL Workbench | Data storage and RFM SQL analysis |
+| Python + pandas | Data cleaning and EDA |
+| SQLAlchemy | Python-MySQL connection for AI notebook |
+| Jupyter Notebook | Data cleaning and AI analysis |
 | Anthropic Claude API | AI-powered business insights |
 | Tableau Public | BI dashboards |
-| Jupyter Notebook | Analysis environment |
 | VS Code | Development environment |
 
 ---
