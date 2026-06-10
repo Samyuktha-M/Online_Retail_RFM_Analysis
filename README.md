@@ -21,8 +21,8 @@ This project builds a complete customer analytics pipeline from raw data to AI-p
 - **541,909 rows** cleaned to **390,857** valid transactions
 - **4,334 customers** scored and segmented using RFM methodology
 - **7 customer segments** identified — Champions to Lost
-- *7 Claude AI features** — insight narrator, SWOT analysis, 
-  business improvement plan, email generator, text-to-SQL, 
+- **7 Claude AI features** — insight narrator, SWOT analysis, 
+  business improvement plan, email generator, interactive text-to-SQL, 
   customer intelligence centre, executive summary
 - **3 Tableau dashboards** published to Tableau Public
 
