@@ -169,8 +169,8 @@ jupyter notebook notebooks/RFM_AI_Analysis.ipynb
 
 | File | Description | Rows |
 |------|-------------|------|
-| `rfm_segments.csv` | Customer segments with RFM scores and labels | 4,334 |
-| `rfm_scores.csv` | Raw RFM scores before segmentation | 4,334 |
+| `rfm_segments.csv` | Customer RFM scores and segment assignments (Champions, At Risk, Lost etc.) | 4,334 |
+| `rfm_scores.csv` | Raw RFM metrics and scores before segmentation  | 4,334 |
 
 > Note: `sales_clean.csv` not included due to file size.
 > Download raw dataset from UCI or Kaggle links above.
