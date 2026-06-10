@@ -67,7 +67,6 @@ The Jupyter notebook integrates Claude API for 7 use cases:
 
 | Feature | Description |
 |---------|-------------|
-| **KPI Summary** | Pulls live metrics from MySQL |
 | **Insight Narrator** | Auto-generates business narrative from segment data |
 | **SWOT Analysis** | Dynamic SWOT using live database context |
 | **Business Improvement Plan** | Strategic recommendations with ROI projections |
