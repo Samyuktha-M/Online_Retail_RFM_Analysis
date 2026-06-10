@@ -158,8 +158,7 @@ jupyter notebook notebooks/RFM_AI_Analysis.ipynb
 - UK-based non-store online retailer
 - 38 countries
 - [Dataset Link](https://archive.ics.uci.edu/ml/datasets/online+retail)
-- | Kaggle |
-- [Download](https://www.kaggle.com/datasets/vijayuv/onlineretail) |
+- | Kaggle |[Download](https://www.kaggle.com/datasets/vijayuv/onlineretail) |
 
 ---
 
