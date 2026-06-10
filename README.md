@@ -35,7 +35,6 @@ This project builds a complete customer analytics pipeline from raw data to AI-p
 | MySQL | Data storage and SQL analysis |
 | Python + pandas | Data cleaning and processing |
 | SQLAlchemy | Python-MySQL connection |
-| Plotly | Interactive visualisations |
 | Anthropic Claude API | AI-powered business insights |
 | Tableau Public | BI dashboards |
 | Jupyter Notebook | Analysis environment |
