@@ -92,16 +92,16 @@ The Jupyter notebook integrates Claude API for 7 use cases:
 
 ## 🗂️ RFM Segments
 
-| Segment | Customers | Revenue | Avg Recency | Avg Frequency |
-|---------|-----------|---------|-------------|---------------|
-| Champions | 1,219 | £5,869,362 | 13.7 days | 9.4 orders |
-| Loyal Customers | 571 | £992,204 | 50.7 days | 4.2 orders |
-| At Risk | 531 | £746,433 | 126.2 days | 3.7 orders |
-| Lost | 784 | £377,897 | 273.2 days | 1.2 orders |
-| Potential Loyalists | 279 | £344,295 | 16.4 days | 2.0 orders |
-| Need Attention | 715 | £316,093 | 95.2 days | 1.1 orders |
-| New Customers | 235 | £75,173 | 19.2 days | 1.0 orders |
-| **Total** | **4,334** | **£8,721,457** |
+| Segment | Customers | % of Base | Revenue | Avg Recency | Avg Frequency | Avg Monetary |
+|---------|-----------|-----------|---------|-------------|---------------|--------------|
+| Champions | 1,219 | 28.1% | £5,869,362 | 13.7 days | 9.4 orders | £4,815 |
+| Loyal Customers | 571 | 13.2% | £992,204 | 50.7 days | 4.2 orders | £1,738 |
+| At Risk | 531 | 12.3% | £746,433 | 126.2 days | 3.7 orders | £1,406 |
+| Lost | 784 | 18.1% | £377,897 | 273.2 days | 1.2 orders | £482 |
+| Potential Loyalists | 279 | 6.4% | £344,295 | 16.4 days | 2.0 orders | £1,234 |
+| Need Attention | 715 | 16.5% | £316,093 | 95.2 days | 1.1 orders | £442 |
+| New Customers | 235 | 5.4% | £75,173 | 19.2 days | 1.0 orders | £320 |
+| **Total** | **4,334** | **100%** | **£8,721,457** |
 
 ---
 
