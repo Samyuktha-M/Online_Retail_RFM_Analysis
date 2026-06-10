@@ -45,17 +45,18 @@ This project builds a complete customer analytics pipeline from raw data to AI-p
 ## 📁 Repository Structure
 
 online-retail-rfm-analysis/
-├── notebooks/
-│   └── RFM_AI_Analysis.ipynb
-├── sql/
-│   ├── 01_data_cleaning.sql
-│   ├── 02_rfm_metrics.sql
-│   ├── 03_rfm_scoring.sql
-│   ├── 04_rfm_segments.sql
-│   └── 05_segment_analysis.sql
-├── data/
-│   └── rfm_segments.csv
-└── README.md
+    ├── notebooks/
+    │   ├── 01_Data_Cleaning.ipynb
+    │   └── 02_RFM_AI_Analysis.ipynb
+    ├── sql/
+    │   ├── 01_data_cleaning.sql
+    │   ├── 02_rfm_scoring.sql
+    │   └── 03_rfm_segments.sql
+    ├── scripts/
+    │   └── export_csv.py
+    ├── data/
+    │   └── rfm_segments.csv
+    └── README.md
 
 ---
 
