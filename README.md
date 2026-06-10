@@ -122,10 +122,15 @@ Source: UCI Machine Learning Repository
 ## 🔍 Data Cleaning Summary
 
 **Data type conversions:**
-- `InvoiceNo` → string (was numeric)
-- `InvoiceDate` → datetime (was string)
-- `CustomerID` → integer (was float)
-- `Revenue` → calculated column added (Quantity × UnitPrice)
+
+| Column | Original Type | Converted To | Reason |
+|--------|--------------|--------------|--------|
+| `InvoiceNo` | Numeric | String | Needed string for C-prefix cancellation detection |
+| `InvoiceDate` | String | Datetime | Needed datetime for recency calculations |
+| `CustomerID` | Float | Integer | Loaded as float due to nulls — converted after dropping nulls |
+| `Revenue` | — | Decimal | New calculated column — Quantity × UnitPrice |
+
+**Cleaning steps applied:**
 
 | Step | Action |
 |------|--------|
@@ -135,10 +140,11 @@ Source: UCI Machine Learning Repository
 | Remove negatives | Drop rows where Quantity ≤ 0 or UnitPrice ≤ 0 |
 | Remove duplicates | Drop exact duplicate rows |
 | **Final dataset** | **390,857 clean rows** |
----
-**Additional steps:**
-- Cancellations saved as separate dataframe (not just deleted)
-- Revenue column added: Quantity × UnitPrice
+
+**Additional notes:**
+- Cancellations saved as separate dataframe for potential future analysis
+- Revenue column added as Quantity × UnitPrice
+- Raw dataset: 541,909 rows → Clean dataset: 390,857 rows
   
 ## 📊 Tableau Dashboards
 
