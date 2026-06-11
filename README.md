@@ -205,7 +205,7 @@ CREATE TABLE sales (
 
   **Step 4 — Export CSV files:**
 - Run `scripts/export_csv.py`
-- Exports `rfm_segments.csv`, `rfm_scores.csv` and `sales_clean~ to Desktop
+- Exports `rfm_segments`, `rfm_scores` and `sales_clean` tables to Desktop as csv files
 
 **Step 5 — Claude API Analysis:**
 - Get API key from https://console.anthropic.com
