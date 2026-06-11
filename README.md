@@ -195,8 +195,8 @@ CREATE TABLE sales (
 
 **Step 3 — Run SQL files in order:**
 ```
-01_data_cleaning.sql   ← additional duplicate checks,
-                          creates sales_clean table
+01_data_cleaning.sql   ← sanity checks and creates
+                          sales_clean from sales table
 02_rfm_scoring.sql     ← RFM metrics + NTILE scoring,
                           creates rfm_scores table
 03_rfm_segments.sql    ← segment labels,
@@ -208,7 +208,9 @@ CREATE TABLE sales (
 - Exports `rfm_segments`, `rfm_scores` and `sales_clean` tables to Desktop as csv files
 
 **Step 5 — Claude API Analysis:**
-- Get API key from https://console.anthropic.com
+- Create account at https://console.anthropic.com
+- Add $5 credits (minimum) to activate API access
+- Go to API Keys → Create Key
 - Open `notebooks/RFM_AI_Analysis.ipynb`
 - Replace `YOUR_ANTHROPIC_API_KEY` in Cell 1
 - Run all cells
