@@ -258,4 +258,4 @@ CREATE TABLE sales (
 **Samyuktha Muralidharan**
 
 - 💻 GitHub: [github.com/Samyuktha-M](https://github.com/Samyuktha-M)
-- 🔗 LinkedIn: [linkedin.com/in/your-profile]https://www.linkedin.com/in/samyuktha-muralidharan-a5061b5a/
+- 🔗 LinkedIn: https://www.linkedin.com/in/samyuktha-muralidharan-a5061b5a/
