@@ -152,24 +152,45 @@ Source: UCI Machine Learning Repository
 
 ### Prerequisites
 ```bash
-pip install pandas sqlalchemy pymysql anthropic plotly jupyter
+pip install pandas sqlalchemy pymysql anthropic jupyter
 ```
 
-### Database Setup
-- MySQL 8.0+
-- Create database `online_retail`
-- Load UCI Online Retail dataset
-- Run SQL files in `/sql` folder in order
+### Step by Step Run Order
 
-### API Key
-1. Get key from https://console.anthropic.com
-2. Replace `YOUR_ANTHROPIC_API_KEY` in Cell 1 of notebook
+**Step 1 — Data Cleaning:**
+- Download dataset from UCI or Kaggle (links above)
+- Open `notebooks/01_Data_Cleaning.ipynb`
+- Run all cells
+- Exports `Online_Retail_clean.csv` to your Desktop
 
-### Run Notebook
-```bash
-jupyter notebook notebooks/RFM_AI_Analysis.ipynb
+**Step 2 — Load into MySQL:**
+- Open MySQL Workbench
+- Create database:
+```sql
+CREATE DATABASE online_retail;
 ```
+- Import `Online_Retail_clean.csv` as table `sales_clean`
 
+**Step 3 — RFM Analysis in SQL:**
+- Run SQL files in `/sql` folder in order:
+- 01_data_cleaning.sql   ← sanity checks
+02_rfm_scoring.sql     ← RFM metrics + NTILE scoring
+03_rfm_segments.sql    ← segment labels
+
+  **Step 4 — Export CSV files:**
+- Run `scripts/export_csv.py`
+- Exports `rfm_segments.csv` and `rfm_scores.csv` to Desktop
+
+**Step 5 — Claude API Analysis:**
+- Get API key from https://console.anthropic.com
+- Replace `YOUR_ANTHROPIC_API_KEY` in Cell 1
+- Open `notebooks/02_RFM_AI_Analysis.ipynb`
+- Run all cells
+
+**Step 6 — Tableau Dashboard (optional):**
+- Open Tableau Public
+- Connect to `rfm_segments.csv` and `sales_clean.csv`
+- Or view published dashboards at links above
 ---
 
 ## 📂 Data Source
