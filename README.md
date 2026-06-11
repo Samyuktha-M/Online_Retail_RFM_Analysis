@@ -61,22 +61,6 @@ Online-Retail-RFM-Analysis/
 
 ---
 
-## 🤖 Claude AI Features
-
-The Jupyter notebook integrates Claude API for 7 use cases:
-
-| Feature | Description |
-|---------|-------------|
-| **Insight Narrator** | Auto-generates business narrative from segment data |
-| **SWOT Analysis** | Dynamic SWOT using live database context |
-| **Business Improvement Plan** | Phased 30/90/180 day action plan built from segment summary, business context and SWOT output —     with revenue recovery projections |
-| **Email Generator** | Tailored marketing emails per segment — At Risk tiered by recency, Lost restricted to top 200 high-value      customers, each with segment-specific tone and offer |
-| **Text-to-SQL** | Interactive natural language interface — type any question, Claude generates and executes SQL, returns results    with AI interpretation |
-| **Customer Intelligence Centre** | Interactive lookup — enter customer ID for full RFM profile, AI narrative and personalised       email tailored by segment and spend level |
-| **Executive Summary** | 6-section board report synthesising all previous analysis outputs — key findings, critical risks, priority recommendations and expected revenue impact|
-
----
-
 ## 📈 Key Findings
 
 - **£8.72M** total revenue across 13 months
@@ -104,6 +88,29 @@ The Jupyter notebook integrates Claude API for 7 use cases:
 | **Total** | **4,334** | **100%** | **£8,721,457** |
 
 ---
+
+## 💡 Notable Anomaly
+
+**Customer 16446** — classified as Potential Loyalist but spent £168,472 in just 2 orders. Analysis identified this as a likely wholesale buyer misclassified by standard RFM scoring. In production this would warrant a separate wholesale customer tier.
+
+---
+
+## 🤖 Claude AI Features
+
+The Jupyter notebook integrates Claude API for 7 use cases:
+
+| Feature | Description |
+|---------|-------------|
+| **Insight Narrator** | Auto-generates business narrative from segment data |
+| **SWOT Analysis** | Dynamic SWOT using live database context |
+| **Business Improvement Plan** | Phased 30/90/180 day action plan built from segment summary, business context and SWOT output —     with revenue recovery projections |
+| **Email Generator** | Tailored marketing emails per segment — At Risk tiered by recency, Lost restricted to top 200 high-value      customers, each with segment-specific tone and offer |
+| **Text-to-SQL** | Interactive natural language interface — type any question, Claude generates and executes SQL, returns results    with AI interpretation |
+| **Customer Intelligence Centre** | Interactive lookup — enter customer ID for full RFM profile, AI narrative and personalised       email tailored by segment and spend level |
+| **Executive Summary** | 6-section board report synthesising all previous analysis outputs — key findings, critical risks, priority recommendations and expected revenue impact|
+
+---
+
 ## 📋 Original Dataset Schema
 
 Source: UCI Machine Learning Repository
@@ -118,6 +125,8 @@ Source: UCI Machine Learning Repository
 | UnitPrice | Feature | Continuous | Product price per unit | £ Sterling |
 | CustomerID | Feature | Categorical | 5-digit customer identifier | — |
 | Country | Feature | Categorical | Customer country of residence | — |
+
+---
 
 ## 🔍 Data Cleaning Summary
 
@@ -148,6 +157,34 @@ Source: UCI Machine Learning Repository
 - Cancellations saved as separate dataframe for potential future analysis
 - Revenue column added as Quantity × UnitPrice
 - Raw dataset: 541,909 rows → Clean dataset: 390,857 rows
+
+---
+
+## 📂 Data Source
+
+**UCI Machine Learning Repository — Online Retail Dataset**
+- 541,909 transactions
+- December 2010 — December 2011
+- UK-based non-store online retailer
+- 38 countries
+
+| Source | Link |
+|--------|------|
+| UCI Repository | [Download](https://archive.ics.uci.edu/ml/datasets/online+retail) |
+| Kaggle | [Download](https://www.kaggle.com/datasets/vijayuv/onlineretail) |
+
+---
+
+## 🗄️ Data Files Included
+
+| File | Description | Rows |
+|------|-------------|------|
+| `rfm_segments.csv` | Customer RFM scores and segment assignments (Champions, At Risk, Lost etc.) | 4,334 |
+| `rfm_scores.csv` | Raw RFM metrics and scores before segmentation  | 4,334 |
+
+> Note: `sales_clean.csv` not included due to file size (390,857 rows).
+> Download raw dataset from UCI or Kaggle links above and run
+> notebooks and SQL files to reproduce.
 
 ---
 
@@ -203,7 +240,7 @@ CREATE TABLE sales (
                           creates rfm_segments table
 ```
 
-  **Step 4 — Export CSV files:**
+**Step 4 — Export CSV files:**
 - Run `scripts/export_csv.py`
 - Exports `rfm_segments`, `rfm_scores` and `sales_clean` tables to Desktop as csv files
 
@@ -219,37 +256,6 @@ CREATE TABLE sales (
 - Open Tableau Public
 - Connect to `rfm_segments.csv` and `sales_clean.csv`
 - Or view published dashboards at links above
----
-
-## 📂 Data Source
-
-**UCI Machine Learning Repository — Online Retail Dataset**
-- 541,909 transactions
-- December 2010 — December 2011
-- UK-based non-store online retailer
-- 38 countries
-
-| Source | Link |
-|--------|------|
-| UCI Repository | [Download](https://archive.ics.uci.edu/ml/datasets/online+retail) |
-| Kaggle | [Download](https://www.kaggle.com/datasets/vijayuv/onlineretail) |
-
----
-
-## 🗄️ Data Files Included
-
-| File | Description | Rows |
-|------|-------------|------|
-| `rfm_segments.csv` | Customer RFM scores and segment assignments (Champions, At Risk, Lost etc.) | 4,334 |
-| `rfm_scores.csv` | Raw RFM metrics and scores before segmentation  | 4,334 |
-
-> Note: `sales_clean.csv` not included due to file size (390,857 rows).
-> Download raw dataset from UCI or Kaggle links above and run
-> notebooks and SQL files to reproduce.
-
-## 💡 Notable Anomaly
-
-**Customer 16446** — classified as Potential Loyalist but spent £168,472 in just 2 orders. Analysis identified this as a likely wholesale buyer misclassified by standard RFM scoring. In production this would warrant a separate wholesale customer tier.
 
 ---
 
