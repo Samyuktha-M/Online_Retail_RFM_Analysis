@@ -4,24 +4,7 @@
 -- UCI Online Retail Dataset (Dec 2010 - Dec 2011)
 -- ══════════════════════════════════════════════════════
 
--- ── STEP 1: CREATE DATABASE ───────────────────────────
-CREATE DATABASE IF NOT EXISTS online_retail;
-USE online_retail;
-
--- ── STEP 2: CREATE RAW TABLE ──────────────────────────
-CREATE TABLE sales (
-    invoice_no  VARCHAR(20),
-    stock_code  VARCHAR(20),
-    descriptn   VARCHAR(255),
-    quantity    INT,
-    invoice_date DATETIME,
-    unit_price  DECIMAL(10,2),
-    customer_id INT,
-    country     VARCHAR(255),
-    revenue     DECIMAL(10,2)
-);
-
--- ── STEP 3: SANITY CHECKS ─────────────────────────────
+-- ── STEP 1: SANITY CHECKS ─────────────────────────────
 
 -- Check null values across all columns
 SELECT 
@@ -54,7 +37,7 @@ FROM sales
 WHERE invoice_no IN ('554084', '575335')
 AND stock_code IN ('23298','23203');
 
--- ── STEP 4: CREATE CLEAN TABLE ────────────────────────
+-- ── STEP 2: CREATE CLEAN TABLE ────────────────────────
 -- Resolves description-only duplicates by picking MIN description
 
 CREATE TABLE sales_clean AS
@@ -74,7 +57,7 @@ GROUP BY
     invoice_date, unit_price, customer_id,
     country, revenue;
 
--- ── STEP 5: VERIFY CLEAN TABLE ────────────────────────
+-- ── STEP 3: VERIFY CLEAN TABLE ────────────────────────
 
 -- Confirm duplicates resolved
 SELECT 
@@ -117,7 +100,7 @@ WHERE stock_code NOT REGEXP '^[0-9]{5}[A-Za-z]?$';
 SELECT COUNT(*) AS clean_rows FROM sales_clean;
 -- Expected: 390,857
 
--- ── STEP 6: FINAL SUMMARY STATS ──────────────────────
+-- ── STEP 4: FINAL SUMMARY STATS ──────────────────────
 SELECT
     ROUND(SUM(revenue), 2)        AS total_revenue,
     COUNT(DISTINCT customer_id)   AS unique_customers,
