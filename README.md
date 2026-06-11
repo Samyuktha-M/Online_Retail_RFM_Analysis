@@ -143,8 +143,8 @@ Source: UCI Machine Learning Repository
 
 **Additional notes:**
 - Cleaning applied in two stages:
-  Stage 1 — Python/pandas: type conversions, removing cancellations, nulls, negatives, duplicates
-  Stage 2 — MySQL: additional duplicate resolution, sanity checks, creates sales_clean table
+- Stage 1 — Python/pandas: type conversions, removing cancellations, nulls, negatives, duplicates
+- Stage 2 — MySQL: additional duplicate resolution, sanity checks, creates sales_clean table
 - Cancellations saved as separate dataframe for potential future analysis
 - Revenue column added as Quantity × UnitPrice
 - Raw dataset: 541,909 rows → Clean dataset: 390,857 rows
