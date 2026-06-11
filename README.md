@@ -145,14 +145,6 @@ Source: UCI Machine Learning Repository
 - Cancellations saved as separate dataframe for potential future analysis
 - Revenue column added as Quantity × UnitPrice
 - Raw dataset: 541,909 rows → Clean dataset: 390,857 rows
-  
-## 📊 Tableau Dashboards
-
-| Dashboard | Charts |
-|-----------|--------|
-| **Sales Overview** | Monthly revenue, top 10 products, revenue by day of week |
-| **Customer Segmentation** | Revenue treemap, customer count, avg monetary, recency & frequency |
-| **RFM Deep Dive** | Recency vs monetary scatter, RFM score heatmap |
 
 ---
 
