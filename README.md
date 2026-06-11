@@ -85,7 +85,7 @@ Online-Retail-RFM-Analysis/
 | Potential Loyalists | 279 | 6.4% | £344,295 | 16.4 days | 2.0 orders | £1,234 |
 | Need Attention | 715 | 16.5% | £316,093 | 95.2 days | 1.1 orders | £442 |
 | New Customers | 235 | 5.4% | £75,173 | 19.2 days | 1.0 orders | £320 |
-| **Total** | **4,334** | **100%** | **£8,721,457** |
+| **Total** | **4,334** | **100%** | **£8,721,457** | | | |
 
 ---
 
@@ -152,8 +152,8 @@ Source: UCI Machine Learning Repository
 
 **Additional notes:**
 - Cleaning applied in two stages:
-- Stage 1 — Python/pandas: type conversions, removing cancellations, nulls, negatives, duplicates
-- Stage 2 — MySQL: additional duplicate resolution, sanity checks, creates sales_clean table
+  - Stage 1 — Python/pandas: type conversions, removing cancellations, nulls, negatives, duplicates
+  - Stage 2 — MySQL: additional duplicate resolution, sanity checks, creates sales_clean table
 - Cancellations saved as separate dataframe for potential future analysis
 - Revenue column added as Quantity × UnitPrice
 - Raw dataset: 541,909 rows → Clean dataset: 390,857 rows
@@ -252,7 +252,7 @@ CREATE TABLE sales (
 - Replace `YOUR_ANTHROPIC_API_KEY` in Cell 1
 - Run all cells
 
-**Step 6 — Tableau Dashboard (optional):**
+**Step 6 — Tableau Dashboard:**
 - Open Tableau Public
 - Connect to `rfm_segments.csv` and `sales_clean.csv`
 - Or view published dashboards at links above
