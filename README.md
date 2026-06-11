@@ -4,16 +4,6 @@ An end-to-end data analytics portfolio project analysing 541,909 transactions fr
 
 ---
 
-## 📊 Tableau Dashboards
-
-| Dashboard | Description | Link |
-|-----------|-------------|------|
-| Sales Overview | Monthly revenue, top products, day of week analysis | [View →](https://public.tableau.com/views/OnlineRetailRFMAnalysis_17793169720000/SalesOverview) |
-| Customer Segmentation | Segment analysis, revenue treemap, RFM metrics | [View →](https://public.tableau.com/views/OnlineRetailRFMAnalysis_17793169720000/CustomerSegmentation) |
-| RFM Deep Dive | Scatter plot, score heatmap, anomaly annotation | [View →](https://public.tableau.com/views/OnlineRetailRFMAnalysis_17793169720000/RFMDeepDive) |
-
----
-
 ## 📊 Project Overview
 
 This project builds a complete customer analytics pipeline from raw data to AI-powered business insights:
@@ -58,6 +48,16 @@ Online-Retail-RFM-Analysis/
     │   ├── rfm_segments.csv
     │   └── rfm_scores.csv 
     └── README.md
+
+---
+
+## 📊 Tableau Dashboards
+
+| Dashboard | Description | Link |
+|-----------|-------------|------|
+| Sales Overview | Monthly revenue, top products, day of week analysis | [View →](https://public.tableau.com/views/OnlineRetailRFMAnalysis_17793169720000/SalesOverview) |
+| Customer Segmentation | Segment analysis, revenue treemap, RFM metrics | [View →](https://public.tableau.com/views/OnlineRetailRFMAnalysis_17793169720000/CustomerSegmentation) |
+| RFM Deep Dive | Scatter plot, score heatmap, anomaly annotation | [View →](https://public.tableau.com/views/OnlineRetailRFMAnalysis_17793169720000/RFMDeepDive) |
 
 ---
 
