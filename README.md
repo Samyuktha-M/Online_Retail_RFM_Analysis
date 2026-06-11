@@ -258,4 +258,4 @@ CREATE TABLE sales (
 **Samyuktha Muralidharan**
 
 - 📊 Tableau Public: [View Dashboards](https://public.tableau.com/app/profile/samyuktha.muralidharan7364)
-- 💻 GitHub: [github.com/your-username](https://github.com)
+- 💻 GitHub: [github.com/Samyuktha-M](https://github.com)
