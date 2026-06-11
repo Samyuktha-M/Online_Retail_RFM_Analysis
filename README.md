@@ -257,5 +257,5 @@ CREATE TABLE sales (
 
 **Samyuktha Muralidharan**
 
-- 📊 Tableau Public: [View Dashboards](https://public.tableau.com/app/profile/samyuktha.muralidharan7364)
-- 💻 GitHub: [github.com/Samyuktha-M](https://github.com)
+- 💻 GitHub: [github.com/Samyuktha-M](https://github.com/Samyuktha-M)
+- 🔗 LinkedIn: [linkedin.com/in/your-profile]https://www.linkedin.com/in/samyuktha-muralidharan-a5061b5a/
