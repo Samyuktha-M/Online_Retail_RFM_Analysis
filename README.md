@@ -142,6 +142,9 @@ Source: UCI Machine Learning Repository
 | **Final dataset** | **390,857 clean rows** |
 
 **Additional notes:**
+- Cleaning applied in two stages:
+  Stage 1 — Python/pandas: type conversions, removing cancellations, nulls, negatives, duplicates
+  Stage 2 — MySQL: additional duplicate resolution, sanity checks, creates sales_clean table
 - Cancellations saved as separate dataframe for potential future analysis
 - Revenue column added as Quantity × UnitPrice
 - Raw dataset: 541,909 rows → Clean dataset: 390,857 rows
@@ -165,17 +168,40 @@ pip install pandas sqlalchemy pymysql anthropic jupyter
 
 **Step 2 — Load into MySQL:**
 - Open MySQL Workbench
-- Create database:
-```sql
-CREATE DATABASE online_retail;
-```
-- Import `Online_Retail_clean.csv` as table `sales_clean`
+- Create database and table:
 
-**Step 3 — RFM Analysis in SQL:**
-- Run SQL files in `/sql` folder in order:
-- 01_data_cleaning.sql   ← sanity checks
-02_rfm_scoring.sql     ← RFM metrics + NTILE scoring
-03_rfm_segments.sql    ← segment labels
+```sql
+CREATE DATABASE IF NOT EXISTS online_retail;
+USE online_retail;
+
+CREATE TABLE sales (
+    invoice_no   VARCHAR(20),
+    stock_code   VARCHAR(20),
+    descriptn    VARCHAR(255),
+    quantity     INT,
+    invoice_date DATETIME,
+    unit_price   DECIMAL(10,2),
+    customer_id  INT,
+    country      VARCHAR(255),
+    revenue      DECIMAL(10,2)
+);
+```
+
+- Import `Online_Retail_clean.csv` into `sales` table
+  using MySQL Workbench Import Wizard
+
+> Note: Load `Online_Retail_clean.csv` (cleaned by Jupyter) 
+> not the original `Online_Retail.csv`
+
+**Step 3 — Run SQL files in order:**
+```
+01_data_cleaning.sql   ← additional duplicate checks,
+                          creates sales_clean table
+02_rfm_scoring.sql     ← RFM metrics + NTILE scoring,
+                          creates rfm_scores table
+03_rfm_segments.sql    ← segment labels,
+                          creates rfm_segments table
+```
 
   **Step 4 — Export CSV files:**
 - Run `scripts/export_csv.py`
