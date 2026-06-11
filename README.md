@@ -137,8 +137,8 @@ Source: UCI Machine Learning Repository
 | Remove cancellations | Separate C-prefix invoices into cancellations dataframe |
 | Remove non-products | StockCode temporarily converted to string for regex validation — filter out non-product codes (POST, DOT,     AMAZONFEE) — keep only valid 5-digit product SKUs |
 | Remove nulls | Drop rows with missing CustomerID |
-| Remove negatives | Drop rows where Quantity ≤ 0 or UnitPrice ≤ 0 |
-| Remove duplicates | Drop exact duplicate rows |
+| Remove negatives | Remove zero and negative quantities and prices — indicates returns, errors or free items |
+| Remove duplicates | Identified and removed exact duplicate rows — investigated description-only duplicate pairs (BUNTING SPOTTY,    JUMBO BAG) with different spelling variations — resolved by standardising to one description per transaction |
 | **Final dataset** | **390,857 clean rows** |
 
 **Additional notes:**
