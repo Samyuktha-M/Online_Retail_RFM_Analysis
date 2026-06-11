@@ -243,8 +243,9 @@ CREATE TABLE sales (
 | `rfm_segments.csv` | Customer RFM scores and segment assignments (Champions, At Risk, Lost etc.) | 4,334 |
 | `rfm_scores.csv` | Raw RFM metrics and scores before segmentation  | 4,334 |
 
-> Note: `sales_clean.csv` not included due to file size.
-> Download raw dataset from UCI or Kaggle links above.
+> Note: `sales_clean.csv` not included due to file size (390,857 rows).
+> Download raw dataset from UCI or Kaggle links above and run
+> notebooks and SQL files to reproduce.
 
 ## 💡 Notable Anomaly
 
