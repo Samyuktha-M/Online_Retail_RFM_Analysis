@@ -209,8 +209,8 @@ CREATE TABLE sales (
 
 **Step 5 — Claude API Analysis:**
 - Get API key from https://console.anthropic.com
+- Open `notebooks/RFM_AI_Analysis.ipynb`
 - Replace `YOUR_ANTHROPIC_API_KEY` in Cell 1
-- Open `notebooks/02_RFM_AI_Analysis.ipynb`
 - Run all cells
 
 **Step 6 — Tableau Dashboard (optional):**
