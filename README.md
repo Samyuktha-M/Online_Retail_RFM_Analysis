@@ -162,7 +162,7 @@ pip install pandas sqlalchemy pymysql anthropic jupyter
 
 **Step 1 — Data Cleaning:**
 - Download dataset from UCI or Kaggle (links above)
-- Open `notebooks/01_Data_Cleaning.ipynb`
+- Open `notebooks/RFM_Data_Cleaning.ipynb`
 - Run all cells
 - Exports `Online_Retail_clean.csv` to your Desktop
 
