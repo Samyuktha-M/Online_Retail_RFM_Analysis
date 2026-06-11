@@ -135,7 +135,7 @@ Source: UCI Machine Learning Repository
 | Step | Action |
 |------|--------|
 | Remove cancellations | Separate C-prefix invoices into cancellations dataframe |
-| Remove non-products | Filter StockCodes not matching `^\d{5}[A-Za-z]?$` |
+| Remove non-products | StockCode temporarily converted to string for regex validation — filter out non-product codes (POST, DOT,     AMAZONFEE) — keep only valid 5-digit product SKUs |
 | Remove nulls | Drop rows with missing CustomerID |
 | Remove negatives | Drop rows where Quantity ≤ 0 or UnitPrice ≤ 0 |
 | Remove duplicates | Drop exact duplicate rows |
