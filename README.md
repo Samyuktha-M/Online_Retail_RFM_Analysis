@@ -125,8 +125,8 @@ Source: UCI Machine Learning Repository
 
 | Column | Original Type | Converted To | Reason |
 |--------|--------------|--------------|--------|
-| `InvoiceNo` | Object/String | String | Explicit conversion to ensure string type for C-prefix detection |
-| `InvoiceDate` | Object/String | Datetime | Needed datetime for recency date calculations |
+| `InvoiceNo` | Object | String | Explicit conversion to ensure string type for C-prefix detection |
+| `InvoiceDate` | Object | Datetime | Needed datetime for recency date calculations |
 | `CustomerID` | Float | Integer | Loaded as float due to null values — converted after dropping nulls |
 | `Revenue` | — | Float | New calculated column — Quantity × UnitPrice |
 
